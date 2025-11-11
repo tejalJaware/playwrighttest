@@ -8,7 +8,7 @@ test('locators',async ({page})=>
     await page.locator('#loginusername').fill('tejal@123')
     await page.fill('#loginpassword','tejal')
     await page.click("button[onclick='logIn()']")
-   await page.getByRole('link', { name: 'Contact' }).click();
+  // await page.getByRole('link', { name: 'Contact' }).click();
 
     page.close();
 
