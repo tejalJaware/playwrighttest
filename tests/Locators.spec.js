@@ -3,6 +3,7 @@ import {test,expect} from '@playwright/test'
 test('locators',async({page})=>
 {
     await page.goto('https://www.demoblaze.com');
+    await page.getByRole('link',{name: "Home "}).click();
    await page.click('#login2')
    await page.fill('#loginusername','pavanol');
    await page.locator('#loginpassword').fill('test@123');
@@ -18,7 +19,5 @@ test('locators',async({page})=>
         const linktext = await link.textContent()
         console.log(linktext)
      }
-
-
     page.close();
 })
